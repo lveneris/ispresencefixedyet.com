@@ -1,6 +1,7 @@
 name: "Is Presence Fixed Yet?"
 title: "Is Presence Fixed Yet?"
 include:
-  - index.md
+- index.md
+- .well-known
 
 theme: jekyll-theme-hacker
