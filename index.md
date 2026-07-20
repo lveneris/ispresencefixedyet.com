@@ -26,6 +26,9 @@ If you are interested in helping improve Presence for the Matrix community, plea
     - **Implementations:**
       - 🚧 **Server:** [Continuwuity] (WIP)
       - 🚧 **Client:** [Sable Client] (WIP)
+- 🚧 **Revised Social Presence**, remodelling presence information for social utility, overrides, and future statuses
+    - **Status:** Concept
+    - **How you can help:** Join [#presence-v2:zirco.dev] and participate in discussion and design conversations
 - 🚧 **Incremental Presence**, reducing load by increasing presence TTLs and providing batching behavior
     - **Status:** Concept
     - **How you can help:** Join [#presence-v2:zirco.dev] and participate in discussion and design conversations
