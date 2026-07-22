@@ -25,7 +25,7 @@ If you are interested in helping improve Presence for the Matrix community, plea
     - **How you can help:** Provide review on [MSC4495] on the MSC tracker.
     - **Implementations:**
       - 🚧 **Ruma:** [#2546](https://github.com/ruma/ruma/pull/2546) (open)
-      - 🚧 **Server:** [Continuwuity] (WIP)
+      - 🚧 **Server:** [Continuwuity] ([#2034](https://forgejo.ellis.link/continuwuation/continuwuity/pulls/2034); open)
       - 🔲 **Client:** TBD
 - 🚧 **Revised Social Presence**, remodelling presence information for social utility, overrides, and future statuses
     - **Status:** Concept
