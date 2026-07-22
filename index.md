@@ -24,8 +24,9 @@ If you are interested in helping improve Presence for the Matrix community, plea
     - **Status:** Proposal (Community Review)
     - **How you can help:** Provide review on [MSC4495] on the MSC tracker.
     - **Implementations:**
+      - 🚧 **Ruma:** [#2546](https://github.com/ruma/ruma/pull/2546) (open)
       - 🚧 **Server:** [Continuwuity] (WIP)
-      - 🚧 **Client:** [Sable Client] (WIP)
+      - 🔲 **Client:** TBD
 - 🚧 **Revised Social Presence**, remodelling presence information for social utility, overrides, and future statuses
     - **Status:** Concept
     - **How you can help:** Join [#presence-v2:zirco.dev] and participate in discussion and design conversations
