@@ -2,9 +2,8 @@
 
 # No, but we're making progress.
 
-Today, presence is one of Matrix's least-deployed core features. Even with efforts to improve implementations[^1],
-**almost every major public Matrix deployment disables federated presence**, citing scalability, privacy, and
-performance concerns[^2]. 
+Today, presence is one of [Matrix]'s least-deployed core features. Even with efforts to improve implementations[^1],
+**almost every major public Matrix deployment disables federated presence**, citing privacy and performance concerns[^2]. 
 
 The root problem is architectural. Today, Matrix servers distribute presence to anyone who shares a room with a user,
 even if the two users have never interacted. Small servers regularly send updates upwards of 100,000 times an hour[^3].
@@ -12,9 +11,9 @@ This expense results in server operators disabling presence entirely, which in t
 for the large public servers where it matters most.
 
 The goal of the Presence v2 initiative is simple: make presence useful for users while reducing its cost to servers.
-We hope that by improving the privacy and scalability of presence, we can make it a feature that is widely deployed and used.
+We hope that through improvements, presence can be a valued feature available to many more Matrix users.
 
-A [group of community members](/contributors) including maintainers of the [Continuwuity] homeserver have been working on
+A [group of community members](/contributors) including maintainers of the [Continuwuity] homeserver, have been working on
 a coordinated set of Matrix Spec Change proposals (MSCs) to dramatically reduce presence's footprint on federation traffic,
 improve privacy, and better align presence with the social use case.
 
@@ -26,8 +25,8 @@ If you are interested in helping improve Presence for the Matrix community, plea
 
 Selective Presence substantially cuts down on the amount of presence data sent by requiring users to explicitly indicate
 which other users or rooms they want to share their presence with, rather than sending presence to all users that can see
-them. Alongside our other proposals, this will both create a new privacy model for presence and make presence something
-that can be used on large servers without overwhelming them.
+them. Alongside our other proposals, this will both create a new privacy model for presence and overall reduce how much
+presence data is sent.
 
 - **Status:** Proposal (Community Review)
 - **How you can help:** Provide review on [MSC4495] on the MSC tracker
@@ -39,7 +38,8 @@ that can be used on large servers without overwhelming them.
 ### Revised Social Presence
 
 Revised Social Presence is a proposal to remodel presence information to better support social use cases, including
-overrides and a `busy` status.
+overrides and a `busy` status. This proposal also makes major improvements in privacy, alongside fixing some
+long-standing visual bugs.
 
 - **Status:** Draft
 - **How you can help:** Join [#presence-v2:zirco.dev] and participate in discussion and design conversations
@@ -92,6 +92,7 @@ Last updated <span id="last-updated-ago"></span> ago (<span id="last-updated-ts"
     Disabling presence resulted in a ~19Hz reduction in outbound federation transactions, or 68,400
     fewer federation transactions per hour.
 
+[Matrix]: https://matrix.org/
 [Continuwuity]: https://continuwuity.org/
 [#presence-v2:zirco.dev]: https://matrix.to/#/#presence-v2:zirco.dev
 [#3971]: https://github.com/matrix-org/synapse/issues/3971
