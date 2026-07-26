@@ -32,7 +32,7 @@ that can be used on large servers without overwhelming them.
 - **Status:** Proposal (Community Review)
 - **How you can help:** Provide review on [MSC4495] on the MSC tracker
 - **Implementations:**
-    - 🚧 **Ruma:** [#2546](https://github.com/ruma/ruma/pull/2546) (open)
+    - 🚧 **Ruma:** [#2546](https://github.com/ruma/ruma/pull/2546) (merged)
     - 🚧 **[Continuwuity]**: [#2034](https://forgejo.ellis.link/continuwuation/continuwuity/pulls/2034) (open)
     - 🔲 **Client:** TBD
 
