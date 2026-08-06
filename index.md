@@ -81,7 +81,7 @@ Last updated <span id="last-updated-ago"></span> ago (<span id="last-updated-ts"
 
 ---
 
-[^1]: Synapse has had a meta-issue open about improving presence performance for 5 years: [#9478]
+[^1]: Synapse has had a meta-issue open about improving presence performance for 5 years: [#15877]
 
 [^2]:
     Since 2018, homeserver operators have had performance concerns related to presence, and even
@@ -97,7 +97,7 @@ Last updated <span id="last-updated-ago"></span> ago (<span id="last-updated-ts"
 [#presence-v2:zirco.dev]: https://matrix.to/#/#presence-v2:zirco.dev
 [#3971]: https://github.com/matrix-org/synapse/issues/3971
 [#9339]: https://github.com/matrix-org/synapse/issues/9339
-[#9478]: https://github.com/matrix-org/synapse/issues/9478
+[#15877]: https://github.com/element-hq/synapse/issues/15877
 [github]: https://github.com/thetayloredman/ispresencefixedyet.com
 [MSC4495]: https://github.com/matrix-org/matrix-spec-proposals/pull/4495
 [presence-v1-rates]: https://github.com/matrix-org/matrix-spec-proposals/pull/4259/changes#r2858835260
