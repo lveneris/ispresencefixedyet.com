@@ -29,7 +29,7 @@ them. Alongside our other proposals, this will both create a new privacy model f
 presence data is sent.
 
 - **Status:** Proposal (Community Review)
-- **How you can help:** Provide review on [MSC4495] on the MSC tracker
+- **How you can help:** Provide review on [MSC4495] on the MSC tracker, or implement it in clients/servers
 - **Implementations:**
     - 🚧 **Ruma:** [#2546](https://github.com/ruma/ruma/pull/2546) (merged)
     - 🚧 **[Continuwuity]**: [#2034](https://forgejo.ellis.link/continuwuation/continuwuity/pulls/2034) (open)
@@ -67,6 +67,9 @@ reduced bandwidth usage and improved performance for clients.
 Finally, we are exploring a proposal to allow users to publish their presence data without sending it to every user
 who can see them. Instead, users would be able to fetch presence data for other users on demand, preserving existing
 presence workflows while reducing traffic sent unnecessarily.
+
+- **Status:** Concept
+- **How you can help:** Join [#presence-v2:zirco.dev] and participate in discussion and design conversations
 
 ---
 
