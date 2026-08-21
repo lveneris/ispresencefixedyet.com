@@ -35,14 +35,17 @@ presence data is sent.
     - 🚧 **[Continuwuity]**: [#2034](https://forgejo.ellis.link/continuwuation/continuwuity/pulls/2034) (open)
     - 🔲 **Client:** TBD
 
-### Revised Social Presence
+### [MSC4532: Revised Social Presence][MSC4532]
 
 Revised Social Presence is a proposal to remodel presence information to better support social use cases, including
 overrides and a `busy` status. This proposal also makes major improvements in privacy, alongside fixing some
 long-standing visual bugs.
 
-- **Status:** Draft
-- **How you can help:** Join [#presence-v2:zirco.dev] and participate in discussion and design conversations
+- **Status:** Proposal (Community Review)
+- **How you can help:** Provide review on [MSC4532] on the MSC tracker, or implement it in clients/servers
+- **Implementations:**
+    - 🔲 **Server**: TBD
+    - 🔲 **Client:** TBD
 
 ### Formalized Presence Batching
 
@@ -103,5 +106,6 @@ Last updated <span id="last-updated-ago"></span> ago (<span id="last-updated-ts"
 [#15877]: https://github.com/element-hq/synapse/issues/15877
 [github]: https://github.com/thetayloredman/ispresencefixedyet.com
 [MSC4495]: https://github.com/matrix-org/matrix-spec-proposals/pull/4495
+[MSC4532]: https://github.com/matrix-org/matrix-spec-proposals/pull/4532
 [presence-v1-rates]: https://github.com/matrix-org/matrix-spec-proposals/pull/4259/changes#r2858835260
 [sliding-sync]: https://github.com/matrix-org/matrix-spec-proposals/pull/4186
