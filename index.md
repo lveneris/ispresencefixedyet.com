@@ -49,7 +49,7 @@ long-standing visual bugs.
 - **How you can help:** Provide review on [MSC4532] on the MSC tracker, or implement it in clients/servers
 - **Implementations:**
     - 🚧 **Ruma:** [WIP branch](https://github.com/thetayloredman/ruma/tree/ln/msc4532)
-    - 🚧 **[Continuwuity]:**: WIP
+    - 🚧 **[Continuwuity]:** WIP
     - 🔲 **Client:** TBD
 
 ### Formalized Presence Batching
