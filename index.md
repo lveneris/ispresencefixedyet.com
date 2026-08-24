@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 [![Matrix](https://matrix.org/images/matrix-logo-white.svg)](https://matrix.org) ![Presence v2 Logo](/assets/logo.png){:height="32px"} Is Presence Fixed Yet?
 
 # No, but we're making progress.
