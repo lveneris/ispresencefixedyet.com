@@ -45,7 +45,7 @@ of which the following contributed:
   * Review: Kévin Commaille
   * Review: lveneris
 * **[Continuwuity][cxy-sel-pr]:** LogN
-  * Review: Nex
+  * Review: nex
   * Review: lveneris
 
 ## Special Thanks
