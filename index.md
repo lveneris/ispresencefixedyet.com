@@ -52,15 +52,6 @@ long-standing visual bugs.
     - 🚧 **[Continuwuity]:** WIP
     - 🔲 **Client:** TBD
 
-### Formalized Presence Batching
-
-Formalized Presence Batching is a proposal to reduce the load of presence on servers by altering how it is sent.
-By increasing the time-to-live of presence information and sending it in batches, we can reduce the number of
-federation transactions required to keep presence up-to-date.
-
-- **Status:** Concept
-- **How you can help:** Join [#presence-v2:zirco.dev] and participate in discussion and design conversations
-
 ### Sliding Sync Extension: Presence
 
 We are exploring a [Sliding Sync (MSC4186)][sliding-sync] extension to reduce the amount of presence data sent
