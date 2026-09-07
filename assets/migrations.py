@@ -108,8 +108,9 @@ def caddy_to_0(log_entries: list[CaddyOutput]) -> dict[str, list[Transaction0]]:
             continue
 
         txn_id = request_uri.removeprefix("/_matrix/federation/v1/send/")
+        request_tag = f"{req_body['origin']}:{txn_id}"
 
-        if txn_id in seen_requests:
+        if request_tag in seen_requests:
             continue
 
         try:
@@ -138,7 +139,7 @@ def caddy_to_0(log_entries: list[CaddyOutput]) -> dict[str, list[Transaction0]]:
                 "received_ts": received_ts,
             }
         )
-        seen_requests.add(f"{req_body['origin']}:{txn_id}")
+        seen_requests.add(request_tag)
 
     return collated_origins
 

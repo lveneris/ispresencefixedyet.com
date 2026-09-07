@@ -47,7 +47,7 @@ guess when presence was enabled?
 ![Screenshot of a resource graph demonstrating a notably unstable increase in open file descriptors, from just under 250 overall to spikes over 1000 from federation sender threads.](/assets/analysis-fds.png)
 ![Screenshot of a resource graph demonstrating a notably unstable increase in federated EDUs, from below 20Hz to peaks of 60-80Hz.](/assets/analysis-edu.png)
 
-If you said the the 7th of August (or the 8th of July if the date format snuck past you), congratulations. If you remain
+If you said the 7th of August (or the 8th of July if the date format snuck past you), congratulations. If you remain
 unconvinced, observe Figure 4, showing the updates sent by the same server after one user sent a single message.
 
 <video autoplay loop width="100%">
@@ -56,9 +56,15 @@ unconvinced, observe Figure 4, showing the updates sent by the same server after
   Screen recording of a terminal showing a rapid burst of logs for small Matrix transactions containing presence.
 </video>
 
-While visuals are fun, we're here for data. So, for today's assignment, we have 313,553 federated presence updates to
-look at, all collected over the course of a few days. If you prefer independent work, fear not; there'll be a section at
-the end of this post with guidance on collecting a presence dataset with Caddy and using our tool to process it.
+All of these metrics together indicate an increase in the work the server is doing to share information with other
+servers. Presence, as it is now, can quickly become overwhelming to servers of any size. If 2 users show up on the
+graphs, imagine the costs incurred to resource-constrained or larger instances.
+
+### In numbers
+
+While visuals are fun, we're here for data. For today's assignment, we have 313,553 federated presence updates to look
+at, all collected over the course of a few days. If you prefer independent work, fear not; there'll be a section at the
+end of this post with guidance on collecting a presence dataset with Caddy and using our tool to process it.
 
 Our processed dataset gives us the following information, showing which fields were changed compared to the previous
 presence update in the sequence and how many occurrences of that pattern there were.
@@ -83,8 +89,8 @@ presence update in the sequence and how many occurrences of that pattern there w
 | `last_active_ago` | 177981 | 56.76% |
 
 Before we begin, it is worth mentioning how this system is *supposed* to work. When a user is **not** active,
-`currently_active` should be turned off, and `last_active_ago` is updated to how many milliseconds ago the user
-changed their presence state or interacted with a room. When a user is active, `currently_active` should be turned on so
+`currently_active` should be turned off, and `last_active_ago` is updated to how many milliseconds ago the user changed
+their presence state or interacted with a room. When a user is active, `currently_active` should be turned on so
 `last_active_ago` no longer has to be updated. In practice, these behaviours are bugged in many implementations,
 including a long-standing bug that causes one implementation to ship malformed presence updates out to the masses. The
 several years these bugs have been left untouched for is a strong indication of the dust accumulating on the presence
@@ -122,17 +128,27 @@ we can remove the last row of unchanged information.
 | `presence`, `status_msg` | 2060 | 1.54% |
 | `presence` | 130823 | 97.99% |
 
-All presence updates contain actual presence information, as they are intended to, and we've dropped more than half
+All presence updates now contain actual presence information, as they are intended to, and we've dropped more than half
 (57%) of the traffic in the process. You may be wondering at this point if this comes at the cost of any information;
 surely dropping half of all broadcasts entails removing features. I am delighted to inform you it does not. Aside from
 the disconcerting millisecond-accuracy data on when you last sent a message, which is now simply based on when you last
 appeared to be online, the system conveys all the same information as before. In fact, it manages to make these
 improvements while adding a busy state and making statuses extendable for future developments.
 
-Finally, note that all of this is just for a remainder. [MSC4495: Selective Presence][selpres] will drastically reduce
-the amount of uninterested parties receiving presence in the first place. Choosing between letting the whole world know
-your business and nobody at all is simply not practical, so the added fidelity grants more privacy for users and lower
-compute costs for server operators. Everyone is a winner on this fine evening.
+## What have we done?
+
+Finally, note that all of these changes apply to a remainder. [MSC4495: Selective Presence][selpres] will drastically
+reduce the amount of uninterested parties receiving presence in the first place. Choosing between letting the whole
+world know your business and nobody at all is simply not practical, so the added fidelity grants more privacy for users
+and lower compute costs for server operators. Everyone is a winner on this fine evening.
+
+In conclusion, Revised Social Presence, as a counterpart to Selective Presence, is estimated to reduce the federation
+burden of the presence left standing by more than 50% in update volume. We can achieve all of this while not only
+transmitting the same information, but adding a busy state so you can let people know when you're unavailable,
+improving the privacy of last seen timers without compromising user experience, and other goodies you can find in the
+proposal.
+
+Thank you for reading, and we hope you'll experience the benefits of this work soon enough.
 
 ## Can I see for myself?
 
@@ -231,7 +247,7 @@ Now, you may run the available analyses:
   messages
 
 Our own dataset is [available for download][dataset] as a prepared collection of Format 1 transactions, in case you
-would like to check our results.
+would like to check the results featured in this post.
 
 ---
 
